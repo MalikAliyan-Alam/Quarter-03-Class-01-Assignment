@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+  .calculator {
+    max-width: 384px;
+    margin: 70px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* border: 2px solid black; */
+    box-shadow: 0px 10px 24px 10px #272727; 
+    border-radius: 25px;
+  }
+
+  .input input {
+    width: 100%;
+    height: 55px;
+    background-color: #272727;
+    border: none;
+    color: #ffffff;
+    font-size: 48px;
+    text-align: right;
+    padding: 10px;
+    /* border: 1px solid red; */
+  }
+  
+  .display {
+    width: 100%;
+    height: 67px;
+    background-color: #272727;
+    color: #ffffff;
+    font-size: 48px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    /* border: 1px solid red; */
+  }
+  
+  button {
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #444444;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .row1{
+    display: flex;
+    gap: 11px;
+  }
+  .edit1{
+    margin-left: 6px;
+  }
+
+  .operator {
+    background-color: #c9287b;
+  }
+  
+ 
+  .number {
+    background-color: #333333;
+  }
+  
+  .equals {
+    background-color: #ff2d55;
+  }
+  
+  .decimal {
+    font-size: 36px;
+  }
+  
+  .zero {
+    width: 150px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Media Query for smaller screens */
+  @media only screen and (max-width: 600px) {
+    .calculator {
+      max-width: 100%;
+      padding: 10px;
+    }
+    .display {
+      font-size: 32px;
+    }
+    button {
+      font-size: 18px;
+      width: 50px;
+      height: 50px;
+      margin: 2px;
+    }
+    .zero {
+      width: 100%;
+    }
+  }
+  
