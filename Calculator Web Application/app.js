@@ -15,3 +15,8 @@ function clearScreen() {
     var inputValue = document.getElementById("number")
     inputValue.value = " ";
 }
+
+function error(){
+    var inputVa;ue = document.getElementById("display");
+    
+}

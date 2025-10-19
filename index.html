@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>Where numbers find their answers.</h1>
+    <div class="calcCont">
+        <div class="inputDiv">
+            <input type="text"  id="displayOutput" readonly>
+            <hr class="line">
+            <input type="text"  id="displayInputs" readonly>
+        </div>
+        <div class="btnsContDiv">
+        <div class="btnsCont">
+            <button class="buttons" id="clear" onclick="ac()">AC</button>
+            <button class="buttons" id="del" onclick="del()"><i class="fa-solid fa-delete-left"></i></button>
+            <button class="buttons btnOpt" onclick="calc('/')">/</button>
+            <button class="buttons btnOpt" onclick="calc('*')">*</button>
+            <button class="buttons btnNum" onclick="calc('7')">7</button>
+            <button class="buttons btnNum" onclick="calc('8')">8</button>
+            <button class="buttons btnNum" onclick="calc('9')">9</button>
+            <button class="buttons btnOpt" onclick="calc('-')">-</button>
+            <button class="buttons btnNum" onclick="calc('4')">4</button>
+            <button class="buttons btnNum" onclick="calc('5')">5</button>
+            <button class="buttons btnNum" onclick="calc('6')">6</button>
+            <button class="buttons btnOpt" onclick="calc('+')">+</button>
+            <button class="buttons btnNum" onclick="calc('1')">1</button>
+            <button class="buttons btnNum" onclick="calc('2')">2</button>
+            <button class="buttons btnNum" onclick="calc('3')">3</button>
+            <button class="buttons btnOpt" onclick="calc('%')">%</button>
+            <button class="buttons btnNum" onclick="calc('0')">0</button>
+            <button class="buttons btnOpt" onclick="calc('.')">.</button>
+            <button class="buttons btnResult" onclick="equal()">=</button>
+        </div>
+        </div>
+    </div>
+    <div class="circle"></div>
+</body>
+<script src="./app.js"></script>
+</html>
