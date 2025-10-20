@@ -5,8 +5,8 @@ var output = document.getElementById('displayOutput');
 function calc(val){
     input.value += val;
     var numbers = input.value;
-    var opt = "/*-+/.";
-    
+    var opt = "/*-+/.%";
+
     for(var i = 0; i < numbers.length ; i++){
         if(opt.includes(numbers[i]) && opt.includes(numbers[i + 1])){
             input.value = input.value.slice(0 , -1);
@@ -27,7 +27,7 @@ function del(){
 
 function equal(){
     var numbers = input.value;
-    var opt = "/*-+/.";
+    var opt = "/*-+/.%";
     
     
 
