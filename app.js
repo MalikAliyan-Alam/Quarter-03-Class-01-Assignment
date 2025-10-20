@@ -1,9 +1,18 @@
 var input = document.getElementById('displayInputs');
 var output = document.getElementById('displayOutput');
 
+
 function calc(val){
     input.value += val;
-    return 
+    var numbers = input.value;
+    var opt = "/*-+/.";
+    
+    for(var i = 0; i < numbers.length ; i++){
+        if(opt.includes(numbers[i]) && opt.includes(numbers[i + 1])){
+            input.value = input.value.slice(0 , -1);
+            return
+        }
+    }
 }
 
 function ac(){
@@ -17,32 +26,36 @@ function del(){
 }
 
 function equal(){
-    var text = input.value;
+    var numbers = input.value;
     var opt = "/*-+/.";
     
+    
 
-    if(text === ""){
+    if(numbers === ""){
         input.value = "";
         alert("Please add an number and operator")
         return
-    }else if(opt.includes(text[0]) || opt.includes(text[text.length -1])){
+    }else if(opt.includes(numbers[0]) || opt.includes(numbers[numbers.length -1])){
         output.value = "Error";
         return       
     }
 
-    var errorFound = false;
+    var isErrorFound = false;
 
-    for(var i= 0; i < text.length -1; i++){
-        if(opt.includes(text[i]) && opt.includes(text[i + 1])){
-            errorFound = true;
-            break;
+    for(var i= 0; i < numbers.length -1; i++){
+        if(opt.includes(numbers[i]) && opt.includes(numbers[i + 1])){
+            isErrorFound = true;
+            break
         }
     }
+
     
-    if(errorFound){
+    
+    if(isErrorFound){
         output.value = "Error";
         return
     }else{
-        output.value = eval(text)
+        output.value = eval(numbers)
     }
+
 }
